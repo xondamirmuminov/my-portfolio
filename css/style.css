@@ -15,6 +15,7 @@ html {
   --bg-color: #0e0822;
   --linear: linear-gradient(150deg, #6dc4eb, #f9b8f9);
   --active: #309ed7;
+  --dark-blue: #090310;
 }
 
 i::before {
@@ -79,7 +80,13 @@ li {
 }
 
 .text-linear {
-  color: var(--linear);
+  background-size: 100%;
+  background-image: var(--linear);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .header {
@@ -253,13 +260,6 @@ li {
 .home__icon {
   margin: 0 9px;
   font-size: 45px;
-  background-size: 100%;
-  background-image: var(--linear);
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
 }
 
 .about {
@@ -269,4 +269,115 @@ li {
 .about__inner {
   column-gap: 35px;
   padding-top: 192px;
+}
+
+.about__title {
+  font-size: 31px;
+}
+
+.about__subtitle {
+  margin: 18px 0 16px 0;
+  font-size: 20px;
+  color: white;
+}
+
+.about__text {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.about__info {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about__info-block {
+  width: 60%;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.about__info-block-title,
+.about__block-value {
+  font-size: 16px;
+  color: white;
+  position: relative;
+}
+
+.about__info-block-title::before {
+  content: ":";
+  position: absolute;
+  right: 35%;
+}
+
+.service {
+  height: 100vh;
+}
+
+.service__inner {
+  text-align: center;
+}
+
+.service__title {
+  margin-bottom: 25px;
+  font-size: 31px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.service__title::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 2px;
+  bottom: 0;
+  margin-left: 20px;
+  background: var(--active);
+}
+
+.service__text {
+  width: 80%;
+  margin: auto;
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.service__inner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 34px;
+  margin-top: 55px;
+}
+
+.service__card {
+  width: 31%;
+  height: 288px;
+  padding: 40px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-blue);
+}
+
+.service__card-img {
+  color: var(--active);
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.service__card-title {
+  font-size: 20px;
+  color: var(--active);
+  margin-bottom: 8px;
+}
+
+.service__card-text {
+  font-size: 16px;
+  color: #eeeeee;
 }

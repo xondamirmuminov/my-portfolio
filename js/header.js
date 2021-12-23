@@ -61,7 +61,7 @@ scrollLinks.forEach((link) => {
       top: position,
     });
     // close
-    linksContainer.style.height = 0;
+    // linksContainer.style.height = 0;
   });
 });
 // calculate heights
