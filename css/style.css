@@ -89,6 +89,30 @@ li {
   -moz-text-fill-color: transparent;
 }
 
+.section__title {
+  margin-bottom: 25px;
+  font-size: 31px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.section__title::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 2px;
+  bottom: 0;
+  margin-left: 20px;
+  background: var(--active);
+}
+
+.section__text {
+  width: 80%;
+  margin: auto;
+  font-size: 16px;
+  color: #eeeeee;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -312,39 +336,19 @@ li {
   right: 35%;
 }
 
-.service {
-  height: 100vh;
+.service,
+.portfolio {
+  min-height: 100vh;
+  padding-bottom: 100px;
 }
 
-.service__inner {
+.service__inner,
+.portfolio__inner {
   text-align: center;
 }
 
-.service__title {
-  margin-bottom: 25px;
-  font-size: 31px;
-  font-weight: bolder;
-  position: relative;
-}
-
-.service__title::before {
-  content: "";
-  position: absolute;
-  width: 74px;
-  height: 2px;
-  bottom: 0;
-  margin-left: 20px;
-  background: var(--active);
-}
-
-.service__text {
-  width: 80%;
-  margin: auto;
-  font-size: 16px;
-  color: #eeeeee;
-}
-
-.service__inner-card {
+.service__inner-card,
+.portfolio__card-inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -355,8 +359,9 @@ li {
 }
 
 .service__card {
-  width: 31%;
+  min-width: 359px;
   height: 288px;
+  flex: 1;
   padding: 40px 34px;
   display: flex;
   flex-direction: column;
@@ -380,4 +385,39 @@ li {
 .service__card-text {
   font-size: 16px;
   color: #eeeeee;
+}
+
+.portfolio__card {
+  min-width: 365px;
+  height: 248px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio__card-hidden {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transform: translate(-370px, 0px);
+  position: absolute;
+  padding: 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgb(9 3 16 / 81%);
+  transition: 0.5s;
+}
+
+.portfolio__card:hover > .portfolio__card-hidden {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
