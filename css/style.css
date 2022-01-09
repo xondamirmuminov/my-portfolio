@@ -574,6 +574,15 @@ textarea::placeholder {
   font-size: 16px;
 }
 
+.footer {
+  background: #090310;
+}
+
+.footer__inner {
+  text-align: center;
+  padding: 30px 0;
+}
+
 @media screen and (max-width: 1074px) {
   .about__inner img {
     width: 55%;
