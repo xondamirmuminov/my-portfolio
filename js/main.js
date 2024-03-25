@@ -1,3 +1,9 @@
+let ageElement = document.getElementById("age");
+
+const yearOfBirth = 2008;
+const age = new Date().getFullYear() - yearOfBirth;
+ageElement.innerText = age;
+
 jQuery(document).ready(function ($) {
   //set animation timing
   var animationDelay = 3000,

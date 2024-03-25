@@ -76,7 +76,7 @@ textarea::placeholder {
   justify-content: center;
 }
 
-.justify-beetwen {
+.justify-betwwen {
   display: flex;
   justify-content: space-between;
 }
@@ -327,8 +327,12 @@ textarea::placeholder {
   padding-top: 192px;
 }
 
-.about__inner img {
+.about__inner-img {
+  flex: 1;
   min-width: 36%;
+  height: 480px;
+  max-width: 346px;
+  object-fit: cover;
 }
 
 .about__block {
@@ -584,9 +588,9 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 1074px) {
-  .about__inner img {
-    width: 55%;
+  .about__inner-img {
     margin: auto;
+    height: 400px;
   }
   .about__title {
     display: none;
